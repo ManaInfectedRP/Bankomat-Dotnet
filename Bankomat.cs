@@ -9,11 +9,13 @@ public class Bankomat
     public int machineBalance = 11000;
     List<string> msgs = new List<string>();
 
+    /* -- Ny Function */
     public int GetMachineBalance()
     {
         return machineBalance;
     }
 
+    /* -- Ny Function */
     public void AddToMachineBalance(int amount)
     {
         if (amount > 0)
@@ -34,9 +36,7 @@ public class Bankomat
         return msg; // return 
     }
 
-    // void != deterministic
-
-    public bool insertCard(Card card)
+    public bool insertCard(Card card) // <-- ändrad från Void till Bool med RETURN värde
     {
         cardInserted = true;
         this.card = card;
