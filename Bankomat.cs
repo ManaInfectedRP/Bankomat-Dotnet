@@ -5,8 +5,8 @@ public class Bankomat
 
     bool cardInserted = false;
     Card card;
-    int amount;
-    int machineBalance = 11000;
+    int amount = 0;
+    public int machineBalance = 11000;
     List<string> msgs = new List<string>();
 
     public int GetMachineBalance()

@@ -53,14 +53,15 @@ public class BankomatTest
   }
 
   [Theory]
-  [InlineData(15000, 5000, 20000)]
-  [InlineData(20000, 1000, 21000)]
-  [InlineData(20000, 0, 20000)]
-  [InlineData(20000, -1000, 19000)]
+  [InlineData(11000, 5000, 16000)]
+  [InlineData(11000, 1000, 12000)]
+  [InlineData(11000, 0, 11000)]
+  [InlineData(11000, -1000, 11000)]
   public void TheoryTestMachineBalance(int initialBalance, int amount, int expectedBalance)
   {
     // Arrange - variables, classes, mocks
     Bankomat bankomat = new();
+    bankomat.machineBalance = initialBalance;
 
     // Act
     bankomat.AddToMachineBalance(amount);
